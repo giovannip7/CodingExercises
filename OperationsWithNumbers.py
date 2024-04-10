@@ -1,4 +1,4 @@
-class Palindrome:
+class Operations:
     def __init__(self, number, input, target):
         self.number = number
         self.input = input 
@@ -16,5 +16,7 @@ class Palindrome:
         return []
 
 
-x = Palindrome(0, [0, 2,7,11,15], 9)
-print(x.twoSum())
+a = list("String")
+
+for i in a:
+    print(i)
