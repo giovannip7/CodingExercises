@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/area_and_volume_calculator.dir/AreaAndVolume.cpp.o  -o area_and_volume_calculator 

@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/7up7down.dir/7Up7Down.cpp.o  -o 7up7down 
