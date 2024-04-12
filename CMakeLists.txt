@@ -8,6 +8,7 @@ add_executable(bysix DivisibleBySix.cpp)
 add_executable(firstleetcode MyFirstCode.cpp)
 add_executable(onetoten OneToTen.cpp)
 add_executable(palindrome Palindrome.cpp)
+add_executable(order_integers ThreeInts.cpp)
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 11)

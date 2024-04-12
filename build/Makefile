@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named order_integers
+
+# Build rule for target.
+order_integers: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 order_integers
+.PHONY : order_integers
+
+# fast build rule for target.
+order_integers/fast:
+	$(MAKE) -f CMakeFiles/order_integers.dir/build.make CMakeFiles/order_integers.dir/build
+.PHONY : order_integers/fast
+
+#=============================================================================
 # Target rules for targets named onetoten
 
 # Build rule for target.
@@ -350,6 +363,33 @@ Palindrome.cpp.s:
 	$(MAKE) -f CMakeFiles/palindrome.dir/build.make CMakeFiles/palindrome.dir/Palindrome.cpp.s
 .PHONY : Palindrome.cpp.s
 
+ThreeInts.o: ThreeInts.cpp.o
+
+.PHONY : ThreeInts.o
+
+# target to build an object file
+ThreeInts.cpp.o:
+	$(MAKE) -f CMakeFiles/order_integers.dir/build.make CMakeFiles/order_integers.dir/ThreeInts.cpp.o
+.PHONY : ThreeInts.cpp.o
+
+ThreeInts.i: ThreeInts.cpp.i
+
+.PHONY : ThreeInts.i
+
+# target to preprocess a source file
+ThreeInts.cpp.i:
+	$(MAKE) -f CMakeFiles/order_integers.dir/build.make CMakeFiles/order_integers.dir/ThreeInts.cpp.i
+.PHONY : ThreeInts.cpp.i
+
+ThreeInts.s: ThreeInts.cpp.s
+
+.PHONY : ThreeInts.s
+
+# target to generate assembly for a file
+ThreeInts.cpp.s:
+	$(MAKE) -f CMakeFiles/order_integers.dir/build.make CMakeFiles/order_integers.dir/ThreeInts.cpp.s
+.PHONY : ThreeInts.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -358,6 +398,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... order_integers"
 	@echo "... onetoten"
 	@echo "... firstleetcode"
 	@echo "... bysix"
@@ -382,6 +423,9 @@ help:
 	@echo "... Palindrome.o"
 	@echo "... Palindrome.i"
 	@echo "... Palindrome.s"
+	@echo "... ThreeInts.o"
+	@echo "... ThreeInts.i"
+	@echo "... ThreeInts.s"
 .PHONY : help
 
 
