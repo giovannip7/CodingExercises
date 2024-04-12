@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/giovanni/CodingExercises/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -109,6 +109,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named bubblesort
+
+# Build rule for target.
+bubblesort: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bubblesort
+.PHONY : bubblesort
+
+# fast build rule for target.
+bubblesort/fast:
+	$(MAKE) -f CMakeFiles/bubblesort.dir/build.make CMakeFiles/bubblesort.dir/build
+.PHONY : bubblesort/fast
 
 #=============================================================================
 # Target rules for targets named order_integers
@@ -255,6 +268,33 @@ AreaAndVolume.cpp.s:
 	$(MAKE) -f CMakeFiles/area_and_volume_calculator.dir/build.make CMakeFiles/area_and_volume_calculator.dir/AreaAndVolume.cpp.s
 .PHONY : AreaAndVolume.cpp.s
 
+BubbleSort.o: BubbleSort.cpp.o
+
+.PHONY : BubbleSort.o
+
+# target to build an object file
+BubbleSort.cpp.o:
+	$(MAKE) -f CMakeFiles/bubblesort.dir/build.make CMakeFiles/bubblesort.dir/BubbleSort.cpp.o
+.PHONY : BubbleSort.cpp.o
+
+BubbleSort.i: BubbleSort.cpp.i
+
+.PHONY : BubbleSort.i
+
+# target to preprocess a source file
+BubbleSort.cpp.i:
+	$(MAKE) -f CMakeFiles/bubblesort.dir/build.make CMakeFiles/bubblesort.dir/BubbleSort.cpp.i
+.PHONY : BubbleSort.cpp.i
+
+BubbleSort.s: BubbleSort.cpp.s
+
+.PHONY : BubbleSort.s
+
+# target to generate assembly for a file
+BubbleSort.cpp.s:
+	$(MAKE) -f CMakeFiles/bubblesort.dir/build.make CMakeFiles/bubblesort.dir/BubbleSort.cpp.s
+.PHONY : BubbleSort.cpp.s
+
 DivisibleBySix.o: DivisibleBySix.cpp.o
 
 .PHONY : DivisibleBySix.o
@@ -396,8 +436,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... bubblesort"
 	@echo "... order_integers"
 	@echo "... onetoten"
 	@echo "... firstleetcode"
@@ -411,6 +452,9 @@ help:
 	@echo "... AreaAndVolume.o"
 	@echo "... AreaAndVolume.i"
 	@echo "... AreaAndVolume.s"
+	@echo "... BubbleSort.o"
+	@echo "... BubbleSort.i"
+	@echo "... BubbleSort.s"
 	@echo "... DivisibleBySix.o"
 	@echo "... DivisibleBySix.i"
 	@echo "... DivisibleBySix.s"
