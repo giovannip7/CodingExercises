@@ -1,0 +1,8 @@
+/home/giovanni/CodingExercises/build/CMakeFiles/rebuild_cache.dir
+/home/giovanni/CodingExercises/build/CMakeFiles/edit_cache.dir
+/home/giovanni/CodingExercises/build/CMakeFiles/onetoten.dir
+/home/giovanni/CodingExercises/build/CMakeFiles/firstleetcode.dir
+/home/giovanni/CodingExercises/build/CMakeFiles/bysix.dir
+/home/giovanni/CodingExercises/build/CMakeFiles/palindrome.dir
+/home/giovanni/CodingExercises/build/CMakeFiles/7up7down.dir
+/home/giovanni/CodingExercises/build/CMakeFiles/area_and_volume_calculator.dir

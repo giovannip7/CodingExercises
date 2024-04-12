@@ -14,9 +14,3 @@ class Operations:
                 if self.input[i] + self.input[j] == self.target:      
                     return [i,j]
         return []
-
-
-a = list("String")
-
-for i in a:
-    print(i)

@@ -23,4 +23,4 @@ class Matcher:
 prova = ["flower", "flow", "flight"]    
 x = Matcher(prova)
 longest_common_prefix = x.find_longest_common_prefix()
-print("Longest common prefix:", longest_common_prefix)
+print(longest_common_prefix)

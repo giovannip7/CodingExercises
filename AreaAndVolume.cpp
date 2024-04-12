@@ -13,7 +13,7 @@ int AreaAndVolume(int side) {
 
 int main(){
 	int inputValue;
-    cin >> inputValue; 
+    std::cin >> inputValue; 
 	AreaAndVolume(inputValue);
 	return 0;
 
