@@ -10,6 +10,7 @@ add_executable(onetoten OneToTen.cpp)
 add_executable(palindrome Palindrome.cpp)
 add_executable(order_integers ThreeInts.cpp)
 add_executable(bubblesort BubbleSort.cpp)
+add_executable(print_pattern PrintPatternX.cpp)
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 11)

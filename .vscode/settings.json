@@ -1,6 +1,9 @@
 {
     "cmake.configureOnOpen": true,
     "files.associations": {
-        "array": "c"
-    }
+        "*.cpp ": "cpp",
+        "array": "c",
+        "ostream": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
